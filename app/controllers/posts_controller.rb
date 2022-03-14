@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Posts::Sort.new(Posts::Recent.call).call
+    @info = 'Witam !'
   end
 
   def new
